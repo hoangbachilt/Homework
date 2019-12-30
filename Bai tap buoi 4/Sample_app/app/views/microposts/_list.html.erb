@@ -1,0 +1,12 @@
+<h1>Micropost (<%= @microposts.count %>) </h1>
+
+<%= will_paginate%>
+
+<% @microposts.each do |micropost|%>
+	<div class="row" style="border: 1px solid; margin-top: 10px">
+		<p> <%= micropost.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+		<p><%= micropost.content%> </p>
+	</div>
+<%end%>
+
+<%= will_paginate%>

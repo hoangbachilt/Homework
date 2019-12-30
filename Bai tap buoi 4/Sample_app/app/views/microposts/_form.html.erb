@@ -1,0 +1,6 @@
+<h1> Let's create new micropost </h1>
+
+<%= form_for current_user.microposts.build do |f| %>
+	<%= f.text_area :content, class: "col-md-12", style: "margin-bottom: 10px; height: 200px" %>
+	<%= f.submit class: "btn btn-primary col-md-12"%>
+<%end%>
